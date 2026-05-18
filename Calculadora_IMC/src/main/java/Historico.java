@@ -23,28 +23,30 @@ public class Historico {
 
     // Exibe Atletas
     public void exibirRegistrosAtletas() {
+
         if (registrosAtletas.isEmpty()) {
-            System.out.println("\n=== Nenhum IMC de Atleta encontrado ===");
+            System.out.println("\n======= Nenhum IMC de Atleta encontrado =======\n");
             return;
         }
-        System.out.println("\n=== HISTORICO DE IMC (ATLETAS) ===");
+        System.out.println("\n======= HISTORICO DE IMC (ATLETAS) =======\n");
         for (String registro : registrosAtletas) {
             System.out.println(registro);
         }
+        System.out.println();
     }
 
    // Exibe Pessoas
     public void exibirRegistrosPessoas() {
         if (registrosComum.isEmpty()) {
-            System.out.println("\n=== Nenhum IMC de Pessoa Comum encontrado ===");
+            System.out.println("\n======= Nenhum IMC de Pessoa encontrado =======\n");
             return; // Para a execução aqui se estiver vazia
         }
 
-        // CORREÇÃO AQUI: O for precisa estar perfeitamente alinhado dentro do método
-        System.out.println("\n=== HISTORICO DE IMC (PESSOAS COMUNS) ===");
+        System.out.println("\n======= HISTORICO DE IMC (PESSOAS COMUNS) =======\n");
         for (String registro : registrosComum) {
             System.out.println(registro);
         }
+        System.out.println();
     }
 }
 

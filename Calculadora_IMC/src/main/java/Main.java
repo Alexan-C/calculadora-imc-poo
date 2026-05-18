@@ -24,6 +24,12 @@ public class Main {
         // Sistema de seleção
         int opcao = -1;
         while (opcao != 0) {
+
+            System.out.println("-----------------------------------------");
+            System.out.println("       SISTEMA CALCULADORA DE IMC        ");
+            System.out.println("-----------------------------------------");
+
+
             System.out.println("1 - Calcular IMC (Pessoa Comum) |" +
                     " 2 - Calcular IMC (Atleta) |" +
                     "| 3- Exibir Histórico de Pessoas |" +
@@ -36,10 +42,11 @@ public class Main {
             // Opções
             switch (opcao) {
                 case 1:
-                    System.out.print("Nome:");
+                    System.out.println("\n--- CADASTRO: PESSOA COMUM ---");
+                    System.out.print("Nome: ");
                     String nomeP = sc.nextLine();
 
-                    System.out.println("Idade: ");
+                    System.out.print("Idade: ");
                     int idadeP = sc.nextInt();
 
                     System.out.print("Peso (kg): ");
@@ -55,19 +62,21 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Nome do Atleta: ");
+                    System.out.println("\n--- CADASTRO: ATLETA ---");
+                    System.out.print("Nome do Atleta: ");
                     String nomeA = sc.nextLine();
 
-                    System.out.println("Idade: ");
+                    System.out.print("Idade: ");
                     int idadeA = sc.nextInt();
 
-                    System.out.println("Peso (kg): ");
+                    System.out.print("Peso (kg): ");
                     double pesoA = lerDouble(sc, "Peso");
 
-                    System.out.println("Altura: ");
+                    System.out.print("Altura: ");
                     double alturaA = lerDouble(sc, "Altura");
+                    sc.nextLine();
 
-                    System.out.println("Modalidade");
+                    System.out.print("Modalidade: ");
                     String modalidadeA = sc.nextLine();
 
                     Atleta a = new Atleta(nomeA, idadeA, alturaA, pesoA, modalidadeA);
@@ -87,11 +96,11 @@ public class Main {
                     break;
 
                 case 0:
-                    System.out.println("Encerrando o Sistema...");
+                    System.out.print("Encerrando o Sistema...");
                     break;
 
                 default:
-                    System.out.println("Opção Inválida");
+                    System.out.print("Opção Inválida");
                     return;
             } // fim do switch
         } // fim do while

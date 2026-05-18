@@ -5,7 +5,7 @@ public class SistemaIMC {
 
        // Proteção se caso a pessoa não estiver ativa
         if (!pessoa.isAtivo()){
-            System.out.println("Aviso: Não é possivel cadastrar o IMC de um inativo!");
+            System.out.println("\nAviso: Não é possivel cadastrar o IMC de um inativo!\n");
             return;
         }
 
@@ -13,7 +13,7 @@ public class SistemaIMC {
         String classe = pessoa.mostrarIMC(imc);
 
         // formatação do nome
-        String linha = String.format("%s (%d anos) --> IMC: %.2f (%s)", pessoa.getNome(),
+        String linha = String.format("\n%s (%d anos) --> IMC: %.2f (%s)", pessoa.getNome(),
                 pessoa.getIdade(),
                 imc,
                 classe);
@@ -25,6 +25,7 @@ public class SistemaIMC {
         }else {
             historico.adicionarComum(linha);
         }
+
         System.out.println(linha);
     }
 
