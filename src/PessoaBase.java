@@ -1,7 +1,7 @@
 //  Pessoa independe se é atleta ou não é a "base"
 
 // Pessoa Base = podem herdar isso, mas não fica no publico em geral
-public class PessoaBase {
+public abstract class PessoaBase {
     protected String nome;
     protected int idade;
 
@@ -14,7 +14,6 @@ public class PessoaBase {
     }
 
     // Todo mundo tem, mas pode cada um fazer do seu jeito
-
     public abstract String exibirPerfil();
 
     // chamar o nome da pessoa e a Idade

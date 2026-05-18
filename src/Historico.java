@@ -6,35 +6,46 @@ import java.util.ArrayList;
 public class Historico {
 
     // registros das pessoas comuns
-    private List<String> registrosComum = new ArrayList<>();
+    private final List<String> registrosComum = new ArrayList<>();
 
     // registros dos atletas
-    private List<String> registrosAtletas = new ArrayList<>();
+    private final List<String> registrosAtletas = new ArrayList<>();
 
-    // Se der erro
+    // Salva Pessoas comuns
+    public void adicionarComum(String registro){
+        registrosComum.add(registro);
+    }
+
+    // Salva Atletas
+    public void adicionarAtleta(String registro){
+        registrosAtletas.add(registro);
+    }
+
+    // Exibe Atletas
     public void exibirRegistrosAtletas() {
         if (registrosAtletas.isEmpty()) {
-            System.out.println("\n===Nenhum IMC encontrado ---");
+            System.out.println("\n=== Nenhum IMC de Atleta encontrado ===");
             return;
         }
-        // imprime os nomes mais bonitos
-        System.out.println("\n=== HISTORICO DE IMC ===");
+        System.out.println("\n=== HISTORICO DE IMC (ATLETAS) ===");
         for (String registro : registrosAtletas) {
             System.out.println(registro);
         }
     }
 
-    // se der erro
-    public void exibirRegistrosPessoas(){
-            if (registrosComum.isEmpty()){
-                System.out.println("\n===Nenhum IMC encontrado ---");
-                return;
-            }
+   // Exibe Pessoas
+    public void exibirRegistrosPessoas() {
+        if (registrosComum.isEmpty()) {
+            System.out.println("\n=== Nenhum IMC de Pessoa Comum encontrado ===");
+            return; // Para a execução aqui se estiver vazia
         }
-        // Imprime pessoas normais
-        System.out.println("\n=== HISTORICO DE IMC ===");
+
+        // CORREÇÃO AQUI: O for precisa estar perfeitamente alinhado dentro do método
+        System.out.println("\n=== HISTORICO DE IMC (PESSOAS COMUNS) ===");
         for (String registro : registrosComum) {
             System.out.println(registro);
         }
     }
+}
+
 

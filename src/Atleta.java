@@ -1,17 +1,17 @@
 // extende de atleta podendo mudar
 public class Atleta extends Pessoa {
   // isso que torna ele diferente
-    private String modalidade;
+    private final String modalidade;
 
 
     // diferencia dos demais incluindo modalidade
     public Atleta(String nome, int idade , double peso, double altura, String modalidade) {
-        super(nome, idade, peso, altura);
+        super(nome, idade, peso, altura, true);
         this.modalidade = modalidade;
     }
     // calcula o IMC e volta para a interface pra poder ter um melhor controle
     @Override
-    public String classificarIMC(double imc){
+    public String mostrarIMC(double imc){
         if (imc < 20.0 )return "Abaixo do peso ideal para o Atleta";
         else if (imc < 27.0)  return "Peso ideal para o Atleta";
         else  return "Acima do Peso ideal para o Atleta";
