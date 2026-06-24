@@ -128,9 +128,9 @@ public class Main {
                     break;
 
                 default:
-                    System.out.print("Opção Inválida\n");
-                    break;
-            }
+                    System.out.print("Opção Inválida");
+                    return;
+            } // fim do switch
         }catch (EntradaInvalidaException e){
             System.out.println("Erro ao processar o IMC: " + e.getMessage());
         }
