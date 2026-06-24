@@ -6,7 +6,7 @@ Este projeto realiza o cálculo do Índice de Massa Corporal (IMC) de um usuári
 ## Pré-requisitos
 Para compilar e executar este projeto, você precisará ter instalado em sua máquina:
 * **Java JDK:** Versão 21 (ou superior)
-* **Apache Maven:** Versão 3.9.16 (ou superior)
+* **Apache Maven:** Versão 3.9.x (ou superior)
 ---
 
 ## Como Compilar
