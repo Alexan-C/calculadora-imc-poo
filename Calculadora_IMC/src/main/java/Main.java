@@ -92,7 +92,7 @@ public class Main {
                     String nomeA = sc.nextLine();
 
                     System.out.print("Idade: ");
-                    int idadeA = sc.nextInt();
+                    int idadeA = lerInt(sc, "Idade");
 
                     System.out.print("Peso (kg): ");
                     double pesoA = lerDouble(sc, "Peso");
@@ -128,8 +128,8 @@ public class Main {
                     break;
 
                 default:
-                    System.out.print("Opção Inválida");
-                    return;
+                    System.out.print("Opção Inválida\n");
+                    break;
             } // fim do switch
         }catch (EntradaInvalidaException e){
             System.out.println("Erro ao processar o IMC: " + e.getMessage());
