@@ -53,12 +53,13 @@ public class Main {
             System.out.println("-----------------------------------------");
             System.out.println("       SISTEMA CALCULADORA DE IMC        ");
             System.out.println("-----------------------------------------");
-            System.out.println("| 1 - Calcular IMC (Pessoa) |");
+            System.out.println("| 1 - Calcular IMC (Pessoa)       |");
             System.out.println("| 2 - Calcular IMC (Atleta)       |");
-            System.out.println("| 3 - Exibir histórico (Pessoa)    |");
-            System.out.println("| 4 - Exibir histórico (Atleta)    |");
+            System.out.println("| 3 - Exibir histórico (Pessoa)   |");
+            System.out.println("| 4 - Exibir histórico (Atleta)   |");
             System.out.println("| 5 - Exibir Todo o Histórico     |");
-            System.out.println("| 0 - Sair                        |\n");
+            System.out.println("| 0 - Sair                        |");
+            System.out.println("-----------------------------------------\n");
             System.out.print("Escolha uma opção: ");
 
             opcao = lerOpcaoMenu(sc);
@@ -67,7 +68,7 @@ public class Main {
             // Opções
             switch (opcao) {
                 case 1:
-                    System.out.println("\n--- CADASTRO: PESSOA COMUM ---");
+                    System.out.println("\n---------- CADASTRO: PESSOA ----------");
                     System.out.print("Nome: ");
                     String nomeP = sc.nextLine();
 
@@ -87,7 +88,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("\n--- CADASTRO: ATLETA ---");
+                    System.out.println("\n---------- CADASTRO: ATLETA ----------");
                     System.out.print("Nome do Atleta: ");
                     String nomeA = sc.nextLine();
 
