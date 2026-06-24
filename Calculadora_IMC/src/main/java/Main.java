@@ -130,7 +130,7 @@ public class Main {
                 default:
                     System.out.print("Opção Inválida\n");
                     break;
-            } // fim do switch
+            }
         }catch (EntradaInvalidaException e){
             System.out.println("Erro ao processar o IMC: " + e.getMessage());
         }
