@@ -6,7 +6,7 @@ public class Pessoa extends PessoaBase implements CalculadoraIMC{
 
     private double altura;
     private double peso;
-    private final boolean ativo;
+    private final boolean  ativo;
 
     public Pessoa(String nome, int idade, double altura, double peso,  boolean ativo) {
         super(nome, idade);
@@ -14,6 +14,7 @@ public class Pessoa extends PessoaBase implements CalculadoraIMC{
         setAltura(altura);
         setPeso(peso);
         this.ativo = ativo;
+
     }
 
     public double getPeso() {return peso;}
@@ -31,6 +32,7 @@ public class Pessoa extends PessoaBase implements CalculadoraIMC{
     }
     public void setIdade(int idade) {
         if (idade <= 0) throw new IllegalArgumentException("Idade deve ser potivo!");
+        this.idade = idade;
     }
 
 
@@ -43,8 +45,9 @@ public class Pessoa extends PessoaBase implements CalculadoraIMC{
         }
         return 0;
     }
+    // Classifica IMC
     @Override
-    public String mostrarIMC(double imc) {
+    public String classificarIMC(double imc) {
         if      (imc < 18.5) return "Abaixo do peso";
         else if (imc < 25.0) return "Peso normal";
         else if (imc < 30.0) return "Sobrepeso";

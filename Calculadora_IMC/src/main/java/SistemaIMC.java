@@ -10,7 +10,7 @@ public class SistemaIMC {
         }
 
         double imc = pessoa.calcularIMC(pessoa.getPeso(), pessoa.getAltura());
-        String classe = pessoa.mostrarIMC(imc);
+        String classe = pessoa.classificarIMC(imc);
 
         // formatação do nome
         String linha = String.format("\n%s (%d anos) --> IMC: %.2f (%s)", pessoa.getNome(),
@@ -28,7 +28,7 @@ public class SistemaIMC {
 
         System.out.println(linha);
     }
-
+    // Exibe históricos
     public void exibirHistoricoAtletas() {
         historico.exibirRegistrosAtletas();
 
@@ -37,7 +37,6 @@ public class SistemaIMC {
         historico.exibirRegistrosPessoas();
     }
     public void exibirtodoHistorico() {
-        historico.exibirRegistrosPessoas();
-        historico.exibirRegistrosAtletas();
+      historico.exibirRegistros();
     }
 }

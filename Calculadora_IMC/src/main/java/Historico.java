@@ -42,11 +42,27 @@ public class Historico {
             return; // Para a execução aqui se estiver vazia
         }
 
-        System.out.println("\n======= HISTORICO DE IMC (PESSOAS COMUNS) =======\n");
+        System.out.println("\n======= HISTORICO DE IMC (PESSOAS) =======\n");
         for (String registro : registrosComum) {
             System.out.println(registro);
         }
         System.out.println();
+    }
+    // Exibe TODOS os REGISTROS
+    public void exibirRegistros() {
+        if (registrosComum.isEmpty() && registrosAtletas.isEmpty()) {
+            System.out.println("\n======= Nenhum IMC encontrado no histórico =======\n");
+            return;
+        }
+        List<String> listaCompleta = new ArrayList<>();
+        listaCompleta.addAll(registrosComum);
+        listaCompleta.addAll(registrosAtletas);
+
+        System.out.println("\n======= HISTÓRICO GERAL DE IMC =======");
+        for (String registro : listaCompleta) {
+            System.out.println(registro);
+        }
+        System.out.println("==================================================\n");
     }
 }
 

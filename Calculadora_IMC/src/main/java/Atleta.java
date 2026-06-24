@@ -11,7 +11,7 @@ public class Atleta extends Pessoa {
     }
     // calcula o IMC e volta para a interface pra poder ter um melhor controle
     @Override
-    public String mostrarIMC(double imc){
+    public String classificarIMC(double imc){
         if (imc < 20.0 )return "Abaixo do peso ideal para o Atleta";
         else if (imc < 27.0)  return "Peso ideal para o Atleta";
         else  return "Acima do Peso ideal para o Atleta";
