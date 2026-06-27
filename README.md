@@ -3,6 +3,12 @@
 Este projeto realiza o cálculo do Índice de Massa Corporal (IMC) de um usuário com base no peso e altura informados pelo terminal. O sistema também classifica o resultado conforme as faixas de IMC e faz o cadastro de pessoas comuns e atletas.
 
 ---
+## Alunos
+Alexandre Crispim - 72601236
+
+Davi Araújo - 72601342
+
+---
 ## Pré-requisitos
 Para compilar e executar este projeto, você precisará ter instalado em sua máquina:
 * **Java JDK:** Versão 21 (ou superior)
